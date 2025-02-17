@@ -47,10 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['wordFrequency'] = $wordFrequency;
 
         // Redirect to result.php
-        header("Location: result.php");
+        header("Location: result.php");//This is file location whereas user can see some of the result and interface.
         exit();
-    } else {
-        $_SESSION['error'] = "Please enter some text to analyze.";
+    } else {//This else statement is where if the user tries to not inputting a information but clicking the button.
+        $_SESSION['error'] = "Please enter some text to analyze.";//Error Message
         header("Location: index.php");
         exit();
     }
